@@ -91,7 +91,8 @@ public class BoardDAOTest {
 		}
 	}
 
-	public void tesDeleteBoard() throws Exception {
+	@Test @Ignore
+	public void testDeleteBoard() throws Exception {
 		int result = boardDAO.deleteBoard(1);
 		logger.info("\n Delete Board Result \n ");
 		if (result > 0) {
