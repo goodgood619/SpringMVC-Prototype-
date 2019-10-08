@@ -14,8 +14,7 @@ import org.zerock.board.dao.BoardDAO;
 import org.zerock.board.model.BoardVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:spring/root-context.xml", "classpath:spring/dataSource-context.xml",
-		"classpath:spring/servlet-context.xml" })
+@ContextConfiguration(locations = { "classpath:spring/root-context.xml", "classpath:spring/dataSource-context.xml","classpath:servlet-context.xml" })
 public class BoardDAOTest {
 	private static final Logger logger = LoggerFactory.getLogger(BoardDAOTest.class);
 
@@ -29,7 +28,7 @@ public class BoardDAOTest {
 		logger.info("\n Board List \n");
 		if (boardList.size() > 0) {
 			for (BoardVO list : boardList) {
-				logger.info(list.title);
+				logger.info(list.getTitle());
 			}
 		} else {
 			logger.info("데이터가 없습니다.");
